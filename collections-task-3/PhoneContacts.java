@@ -26,7 +26,7 @@ public class PhoneContacts {
         for (Map.Entry<String, List<Contact>> entry : groups.entrySet()) {
             System.out.println("- " + entry.getKey());
             for (Contact contact : entry.getValue()) {
-                System.out.println("   Имя: " + contact.getName() + ",    " + "Номер: " + contact.getPhoneNum());
+                System.out.println("   имя: " + contact.getName() + ",    " + "номер: " + contact.getPhoneNum());
             }
         }
     }
@@ -42,8 +42,7 @@ public class PhoneContacts {
         }
         allContacts.sort(Comparator.naturalOrder());
         for (Contact contact : allContacts) {
-            System.out.println("   Имя: " + contact.getName() + "   Номер: " + contact.getPhoneNum());
+            System.out.println("   имя: " + contact.getName() + ",   номер: " + contact.getPhoneNum());
         }
     }
 }
-
