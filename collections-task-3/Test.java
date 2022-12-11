@@ -22,7 +22,7 @@ public class Test {
         }
 
         while (true){
-            System.out.println("Создать контакт (введите наименование и его номер или введите нет)");
+            System.out.println("Создать контакт (введите наименование и его номер (имя, номер) или введите нет)");
             String nameInput = sc.nextLine();
             if (nameInput.equals("нет")){
                 break;
@@ -42,7 +42,7 @@ public class Test {
         System.out.println("Группы в справочнике:");
         PhoneContacts.printContacts();
 
-        System.out.println("Сортированный список");
+        System.out.println("Сортированный список: ");
         phoneContacts.printSortedContacts();
     }
 }
