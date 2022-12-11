@@ -33,7 +33,7 @@ public class Test {
                 Employee emp = new Employee(surname, name, age, gender, education, position, section);
                 employeeList.add(emp);
             }
-            System.out.println("Если хотите закончить ввод данных, введите end");
+            System.out.println("Если хотите закончить ввод данных, введите end, иначе нажмите 'enter'.");
             String input = sc.nextLine();
             for (Employee employee: employeeList) {
                 System.out.println(employee);
@@ -42,10 +42,11 @@ public class Test {
             if (input.equals("end")) {
                 break;
             }
-            System.out.println("Введите фамилию и имя работника, для которого хотите изменить данные");
-            String surname1 = sc.nextLine();
-            String name1 = sc.nextLine();
-            int empIndex = searchByName(surname1, name1, employeeList);
+            System.out.println("Введите фамилию сотрудника, для которого хотите изменить данные");
+            String surnameToChange = sc.nextLine();
+            System.out.println("Введите имю сотрудника");
+            String nameToChange = sc.nextLine();
+            int empIndex = searchByName(surnameToChange, nameToChange, employeeList);
             if (empIndex != -1) {
                 System.out.println("Меняем фамилию сотрудника?");
                 String ansSurname = sc.nextLine();
@@ -111,8 +112,8 @@ public class Test {
             if (employee.getSurname().equals(surname) || employee.getName().equals(name)) {
                 return i;
             }
-
         }
+        System.out.println("Сотрудник не найден.");
         return -1;
     }
 }
