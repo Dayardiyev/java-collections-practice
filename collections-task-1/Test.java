@@ -43,7 +43,7 @@ public class Test {
                     System.out.println("Enter a number");
                     String task = sc.nextLine();
                     int in = Integer.parseInt(task);
-                    list.remove(in);
+                    list.remove(in - 1);
                 }
                 case "0" -> {
                     int num = 0;
